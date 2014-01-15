@@ -1,0 +1,75 @@
+$pageWidth: 960px;
+$gutter: 15px;
+
+@mixin clearfix {
+    *zoom:1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table; 
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/* ---------------------------------------------------------------------
+ Micro Reset
+------------------------------------------------------------------------ */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------------
+ Page
+------------------------------------------------------------------------ */
+.page {
+    width: $pageWidth;
+}
+
+/* ---------------------------------------------------------------------
+ Grid
+------------------------------------------------------------------------ */
+.grid {
+    @include clearfix;
+}
+
+.grid-col {
+    float: left;
+    background: #ddd;
+}
+
+.grid-col + .grid-col {
+    margin-left: ($gutter / $pageWidth) * 100%;
+}
+
+/* individual column sizes */
+.grid-col_12of12 {
+    width: 100%;
+}
+
+// the trick is to add the gutter value to the overall width since the first column never has a margin
+.grid-col_1of12 {
+    width: ((($pageWidth + $gutter) / 12) - $gutter) / $pageWidth * 100%; /* (((overall width + gutter) / 12) - gutter) * 100% */
+}
+
+.grid-col_2of12 {
+    width: ((($pageWidth + $gutter) / 12) * 2 - $gutter) / $pageWidth * 100%; /* (((overall width + gutter) / 12) * 2 - gutter) * 100% */
+}
+
+.grid-col_3of12 {
+    width: ((($pageWidth + $gutter) / 12) * 3 - $gutter) / $pageWidth * 100%; /* (((overall width + gutter) / 12) * 3 - gutter) * 100% */
+}
+
+.grid-col_4of12 {
+    width: ((($pageWidth + $gutter) / 12) * 4 - $gutter) / $pageWidth * 100%; /* (((overall width + gutter) / 12) * 4 - gutter) * 100% */
+}
+
+.grid-col_5of12 {
+    width: ((($pageWidth + $gutter) / 12) * 5 - $gutter) / $pageWidth * 100%; /* (((overall width + gutter) / 12) * 5 - gutter) * 100% */
+}
+
+.grid-col_6of12 {
+    width: ((($pageWidth + $gutter) / 12) * 6 - $gutter) / $pageWidth * 100%; /* (((overall width + gutter) / 12) * 6 - gutter) * 100% */
+}

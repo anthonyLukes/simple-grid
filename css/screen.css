@@ -1,0 +1,72 @@
+/* ---------------------------------------------------------------------
+ Micro Reset
+------------------------------------------------------------------------ */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------------
+ Page
+------------------------------------------------------------------------ */
+.page {
+  width: 960px;
+}
+
+/* ---------------------------------------------------------------------
+ Grid
+------------------------------------------------------------------------ */
+.grid {
+  *zoom: 1;
+}
+.grid:before, .grid:after {
+  content: " ";
+  display: table;
+}
+.grid:after {
+  clear: both;
+}
+
+.grid-col {
+  float: left;
+  background: #ddd;
+}
+
+.grid-col + .grid-col {
+  margin-left: 1.5625%;
+}
+
+/* individual column sizes */
+.grid-col_12of12 {
+  width: 100%;
+}
+
+.grid-col_1of12 {
+  width: 6.90104%;
+  /* (((overall width + gutter) / 12) - gutter) * 100% */
+}
+
+.grid-col_2of12 {
+  width: 15.36458%;
+  /* (((overall width + gutter) / 12) * 2 - gutter) * 100% */
+}
+
+.grid-col_3of12 {
+  width: 23.82813%;
+  /* (((overall width + gutter) / 12) * 3 - gutter) * 100% */
+}
+
+.grid-col_4of12 {
+  width: 32.29167%;
+  /* (((overall width + gutter) / 12) * 4 - gutter) * 100% */
+}
+
+.grid-col_5of12 {
+  width: 40.75521%;
+  /* (((overall width + gutter) / 12) * 5 - gutter) * 100% */
+}
+
+.grid-col_6of12 {
+  width: 49.21875%;
+  /* (((overall width + gutter) / 12) * 6 - gutter) * 100% */
+}
